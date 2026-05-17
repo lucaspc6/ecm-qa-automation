@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.0 on win32)" generated="2026-05-17T11:56:16.370332" rpa="false" schemaversion="5">
+<suite id="s1" name="Auth" source="C:\Users\LucasCarvalho\Documents\Projects\ecm-qa-automation\tests\auth.robot">
+<test id="s1-t1" name="CT01 — Usuário deve acessar a página inicial com sucesso" line="6">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-05-17T11:56:16.637908" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\LucasCarvalho\\Documents\\Projects\\ecm-qa-automation\\results\\browser\\traces\\temp\\6612886c-ff8e-4118-b1af-4278650b4fa6"}</msg>
+<msg time="2026-05-17T11:56:16.675547" level="INFO">Starting Browser process C:\Users\LucasCarvalho\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:57461</msg>
+<msg time="2026-05-17T11:56:18.358236" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\LucasCarvalho\\Documents\\Projects\\ecm-qa-automation\\results\\browser\\traces\\temp\\6612886c-ff8e-4118-b1af-4278650b4fa6"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-05-17T11:56:16.637113" elapsed="1.721424"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-05-17T11:56:18.629634" level="INFO">Successfully initialized new page object and opened url: http://localhost:8080/</msg>
+<msg time="2026-05-17T11:56:18.629807" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>http://localhost:8080/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-05-17T11:56:18.359229" elapsed="0.270881"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-17T11:56:18.778599" level="INFO">Waited for Element with selector text="ECM Marketplace - QA Automation Test" at state visible</msg>
+<arg>text="ECM Marketplace - QA Automation Test"</arg>
+<arg>state=visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-17T11:56:18.630974" elapsed="0.147924"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-05-17T11:56:18.781037" level="INFO">Clicks the element 'id=nav-login'.</msg>
+<arg>id=nav-login</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-05-17T11:56:18.779761" elapsed="0.340193"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-17T11:56:19.150088" level="INFO">Waited for Element with selector text="Login - ECM Marketplace" at state visible</msg>
+<arg>text="Login - ECM Marketplace"</arg>
+<arg>state=visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-17T11:56:19.120856" elapsed="0.029583"/>
+</kw>
+<msg time="2026-05-17T11:56:19.177973" level="INFO">Switching context to context=84ddad6b-7030-42fd-8726-de66fb72fe54 in CURRENT</msg>
+<msg time="2026-05-17T11:56:19.190433" level="INFO">Successfully changed active context: context=84ddad6b-7030-42fd-8726-de66fb72fe54</msg>
+<msg time="2026-05-17T11:56:19.220175" level="INFO">Successfully closed Context</msg>
+<doc>Tipo: Teste de Aceitação
+Dado que o usuário acessa a aplicação pela URL principal
+Então a página inicial deve ser carregada corretamente
+E deve ser possível navegar para a página de login</doc>
+<status status="PASS" start="2026-05-17T11:56:16.635942" elapsed="2.515287"/>
+</test>
+<test id="s1-t2" name="CT02 — Usuário deve realizar login com credenciais válidas" line="23">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-05-17T11:56:19.233623" level="INFO">Switching browser to browser=6d615ce3-03b0-4d4d-8970-92688d223f23</msg>
+<msg time="2026-05-17T11:56:19.238141" level="INFO">Successfully changed active browser: browser=6d615ce3-03b0-4d4d-8970-92688d223f23</msg>
+<msg time="2026-05-17T11:56:19.238366" level="INFO">Reusing existing browser with id: browser=6d615ce3-03b0-4d4d-8970-92688d223f23</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-05-17T11:56:19.231808" elapsed="0.006686"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-05-17T11:56:19.537113" level="INFO">Successfully initialized new page object and opened url: http://localhost:8080/login.html</msg>
+<msg time="2026-05-17T11:56:19.537283" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>http://localhost:8080/login.html</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-05-17T11:56:19.239090" elapsed="0.298416"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-17T11:56:19.580422" level="INFO">Waited for Element with selector text="Login - ECM Marketplace" at state visible</msg>
+<arg>text="Login - ECM Marketplace"</arg>
+<arg>state=visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-17T11:56:19.538355" elapsed="0.042525"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-05-17T11:56:19.584084" level="INFO">Fills the text 'valid_user' in the given field.</msg>
+<arg>id=username</arg>
+<arg>valid_user</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-05-17T11:56:19.582143" elapsed="0.026456"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-05-17T11:56:19.610599" level="INFO">Fills the text 'secret123' in the given field.</msg>
+<arg>id=password</arg>
+<arg>secret123</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-05-17T11:56:19.609535" elapsed="0.032678"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-05-17T11:56:19.645418" level="INFO">Clicks the element 'id=btnLogin'.</msg>
+<arg>id=btnLogin</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-05-17T11:56:19.643330" elapsed="0.054016"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-17T11:56:19.711368" level="INFO">Waited for Element with selector id=msg at state attached</msg>
+<arg>id=msg</arg>
+<arg>attached</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-17T11:56:19.698274" elapsed="0.013333"/>
+</kw>
+<kw name="Wait For Function" owner="Browser">
+<msg time="2026-05-17T11:56:20.303068" level="INFO">Wait For Function completed successfully.</msg>
+<arg>document.getElementById('msg').className === "success"</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Polls JavaScript expression or function in browser until it returns a (JavaScript) truthy value.</doc>
+<status status="PASS" start="2026-05-17T11:56:19.712060" elapsed="0.591419"/>
+</kw>
+<kw name="Get Attribute" owner="Browser">
+<msg time="2026-05-17T11:56:20.329656" level="INFO">Attribute is: 'success'</msg>
+<msg time="2026-05-17T11:56:20.329991" level="INFO">${class_value} = success</msg>
+<var>${class_value}</var>
+<arg>id=msg</arg>
+<arg>class</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-05-17T11:56:20.304406" elapsed="0.025692"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${class_value}</arg>
+<arg>success</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-05-17T11:56:20.331550" elapsed="0.000805"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2026-05-17T11:56:21.698152" level="INFO">Waited for Element with selector text="Products - ECM Marketplace" at state visible</msg>
+<arg>text="Products - ECM Marketplace"</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2026-05-17T11:56:20.333094" elapsed="1.365321"/>
+</kw>
+<kw name="Evaluate JavaScript" owner="Browser">
+<msg time="2026-05-17T11:56:21.722450" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2026-05-17T11:56:21.722862" level="INFO">${auth_value} = true</msg>
+<var>${auth_value}</var>
+<arg>css=body</arg>
+<arg>() =&gt; localStorage.getItem('auth')</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Executes given javascript on the selected element(s) or on page.</doc>
+<status status="PASS" start="2026-05-17T11:56:21.698950" elapsed="0.024039"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${auth_value}</arg>
+<arg>true</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-05-17T11:56:21.723391" elapsed="0.000547"/>
+</kw>
+<msg time="2026-05-17T11:56:21.737348" level="INFO">Switching context to context=bacb8285-fba3-4f4c-8c47-afe91698293e in CURRENT</msg>
+<msg time="2026-05-17T11:56:21.742904" level="INFO">Successfully changed active context: context=bacb8285-fba3-4f4c-8c47-afe91698293e</msg>
+<msg time="2026-05-17T11:56:21.759186" level="INFO">Successfully closed Context</msg>
+<doc>Tipo: Teste de Aceitação - Happy Path
+Dado que o usuário acessa a página de login
+Quando informa usuário e senha válidos
+E clica no botão de login
+Então alerta de sucesso deve ser disparado -- não ocorre na UI, mas é possível verificar por meio de div que é preenchida com valor de sucesso ou erro.
+E deve ser redirecionado para a página de produtos
+E o estado de autenticação deve ser persistido no localStorage</doc>
+<status status="PASS" start="2026-05-17T11:56:19.222164" elapsed="2.502039"/>
+</test>
+<status status="PASS" start="2026-05-17T11:56:16.371807" elapsed="5.388548"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Auth" id="s1" pass="2" fail="0" skip="0">Auth</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
