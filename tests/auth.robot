@@ -1,26 +1,18 @@
-***Settings*** 
-Library    Browser
-
-*** Variables ***
-${HEADLESS}    True
+*** Settings ***
+Resource    ../resources/setup.resource
+Resource    ../resources/flows.resource
 
 
 ***Test Cases*** 
 CT01 — Usuário deve acessar a página inicial com sucesso
-    [Documentation]  Tipo: Teste de Aceitação 
-    ...    Dado que o usuário acessa a aplicação pela URL principal
-    ...    Então a página inicial deve ser carregada corretamente
-    ...    E deve ser possível navegar para a página de login
-    #Dado
-    New Browser    chromium    headless=${HEADLESS}
-    New Page    http://localhost:8080/
-    
-    #Então
-    Wait for Elements State     text="ECM Marketplace - QA Automation Test"    state=visible
-
-    #E
-    Click    id=nav-login
-    Wait for Elements State     text="Login - ECM Marketplace"    state=visible
+    [Documentation]  
+    ...    Tipo: Teste de Aceitação
+    ...    Objetivo: Validar que o usuário consegue acessar a home e navegar para login
+        
+    Dado que o usuário acessa a aplicação
+    Então a página inicial deve ser carregada corretamente
+    E navega para a página de login
+  
 
     
 CT02 — Usuário deve realizar login com credenciais válidas
