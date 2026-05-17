@@ -1,6 +1,9 @@
 ***Settings*** 
 Library    Browser
 
+*** Variables ***
+${HEADLESS}    True
+
 
 ***Test Cases*** 
 CT01 — Usuário deve acessar a página inicial com sucesso
@@ -9,7 +12,7 @@ CT01 — Usuário deve acessar a página inicial com sucesso
     ...    Então a página inicial deve ser carregada corretamente
     ...    E deve ser possível navegar para a página de login
     #Dado
-    New Browser    chromium    headless=False
+    New Browser    chromium    headless=${HEADLESS}
     New Page    http://localhost:8080/
     
     #Então
@@ -30,7 +33,7 @@ CT02 — Usuário deve realizar login com credenciais válidas
     ...    E o estado de autenticação deve ser persistido no localStorage
    
    #Dado
-    New Browser    chromium    headless=False
+    New Browser    chromium    headless=${HEADLESS}
     New Page    http://localhost:8080/login.html
     Wait for Elements State     text="Login - ECM Marketplace"    state=visible
 
@@ -66,7 +69,7 @@ CT03 — Usuário não deve realizar login com credenciais inválidas
     
    
    #Dado
-    New Browser    chromium    headless=False
+    New Browser    chromium    headless=${HEADLESS}
     New Page    http://localhost:8080/login.html
     Wait for Elements State     text="Login - ECM Marketplace"    state=visible
 
