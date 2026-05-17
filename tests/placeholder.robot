@@ -1,7 +1,7 @@
 ***Settings*** 
-Suite Setup No Operation
+Suite Setup    No Operation
 
 
 ***Test Cases*** 
 Placeholder Test
-    Log placeholder
+    Log     pgit laceholder
