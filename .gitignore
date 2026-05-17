@@ -1,0 +1,10 @@
+.venv/
+
+__pycache__/
+*.pyc
+
+results/git rm -r --cached results/
+
+.vscode/
+
+.DS_Store
