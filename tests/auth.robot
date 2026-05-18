@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../resources/setup.resource
 Resource    ../resources/flows.resource
-
+Variables   ../resources/data/variables.yaml
 
 ***Test Cases*** 
 CT01 — Usuário deve acessar a página inicial com sucesso
