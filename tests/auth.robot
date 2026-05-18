@@ -2,6 +2,8 @@
 Resource    ../resources/setup.resource
 Resource    ../resources/flows.resource
 Variables   ../resources/data/variables.yaml
+Suite Setup    Abrir Aplicação Na Home
+Suite Teardown    Fechar Navegador
 
 ***Test Cases*** 
 CT01 — Usuário deve acessar a página inicial com sucesso

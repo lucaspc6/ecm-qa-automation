@@ -47,8 +47,9 @@ jobs:
           rfbrowser init
 
       - name: Run tests
-        run: robot tests/
+        run: |
+            robot tests/auth.robot tests/products.robot tests/checkout.robot
         env:
-          HEADLESS: True
+            HEADLESS: True
 
 
