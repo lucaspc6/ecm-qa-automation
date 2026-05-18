@@ -9,6 +9,12 @@ Abrir Navegador
     ${headless}=    Obter Headless
     New Browser    chromium    headless=${headless}
 
+Fechar Navegador
+    Close Browser
+
+Limpar Estado Do Browser
+    Close Context
+    New Context
 
 Acessar URL 
     [Arguments]     ${url}
