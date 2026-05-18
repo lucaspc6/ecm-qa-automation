@@ -5,6 +5,7 @@ Resource    pages/login.resource
 Resource    config.resource
 Resource    pages/products.resource
 Resource    common.resource
+Resource    pages/checkout.resource
 
 *** Keywords ***
 
@@ -98,5 +99,32 @@ E todos os produtos devem ser persistidos no carrinho
         Validar Produto No Carrinho    ${produto}
     END
 
+E navega para a página de checkout
+    Clicar No Menu Checkout
+    Verificar Página Checkout Carregada
+
+E finaliza a compra
+    Finalizar Compra
+
+
+Então a compra deve ser finalizada com sucesso
+    Validar Checkout Realizado Com Sucesso
+
+
+E o carrinho deve ser limpo
+    Validar Carrinho Vazio
+
+
+E o valor total da compra deve ser atualizado
+    Validar Valor Total Zerado
+
+E o usuário tenta finalizar a compra
+    Finalizar Compra
+
+Então deve ser exibida uma mensagem de erro
+    Validar Checkout Com Erro
+
+E a compra não deve ser concluída
+    Validar Carrinho Não Foi Limpo
 
 
