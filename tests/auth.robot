@@ -1,7 +1,7 @@
 *** Settings ***
 Resource    ../resources/setup.resource
 Resource    ../resources/flows.resource
-
+Variables   ../resources/data/variables.yaml
 
 ***Test Cases*** 
 CT01 — Usuário deve acessar a página inicial com sucesso
@@ -44,6 +44,9 @@ CT03 — Usuário não deve realizar login com credenciais inválidas
     Então o login deve falhar
     E o usuário não deve ser redirecionado
     E o usuário não está autenticado
+
+
+
 
 
 
