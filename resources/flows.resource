@@ -46,4 +46,57 @@ E o usuário não está autenticado
 E o usuário não deve ser redirecionado
     Não Deve Estar Na Página De Produtos
 
+Quando o usuário navega para a página de produtos
+    Clicar No Menu Produtos
+
+Então o usuário deve estar na página de produtos
+    Verificar Página Produtos Carregada
+
+E navega para a página de produtos
+    Clicar No Menu Produtos
+    Verificar Página Produtos Carregada
+
+Quando o usuário busca por um produto existente
+    Set Test Variable   ${produto}     ${PRODUTO_EXISTENTE}
+    Preencher Campo De Busca    ${produto}
+    Aguardar Resultado Da Busca
+    
+Então apenas produtos correspondentes devem ser exibidos
+    Validar Produtos Correspondentes À Busca    ${produto}
+
+Quando o usuário busca por um produto inexistente
+    Set Test Variable    ${produto}    ${PRODUTO_INEXISTENTE}
+    Preencher Campo De Busca    ${produto}
+
+Então nenhum produto deve ser exibido na lista
+    Validar Lista Vazia
+
+Quando o usuário adiciona um produto ao carrinho
+    Set Test Variable    ${produto}    ${PRODUTO_EXISTENTE}
+    Adicionar Produto Ao Carrinho    ${produto}
+
+Então o contador do carrinho deve ser atualizado
+    Validar Contador Do Carrinho    1
+
+E o produto deve ser persistido no carrinho
+     Validar Produto No Carrinho    ${produto}
+
+Quando o usuário adiciona múltiplos produtos ao carrinho
+    Set Test Variable    ${produtos}    ${PRODUTOS_MULTIPLOS}
+
+    FOR    ${produto}    IN    @{produtos}
+        Adicionar Produto Ao Carrinho    ${produto}
+    END
+
+Então o contador do carrinho deve refletir a quantidade adicionada
+    ${quantidade}=    Get Length    ${produtos}
+
+    Validar Contador Do Carrinho    ${quantidade}
+
+E todos os produtos devem ser persistidos no carrinho
+    FOR    ${produto}    IN    @{produtos}
+        Validar Produto No Carrinho    ${produto}
+    END
+
+
 

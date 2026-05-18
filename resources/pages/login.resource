@@ -14,7 +14,7 @@ Preencher Campo Senha
 Clicar no Botao Login
     Click    id=btnLogin
 
-Validar Status do Login
+Validar Status Do Login
     [Arguments]    ${status_esperado}
     Wait For Elements State    id=msg    attached
     Wait For Function    document.getElementById('msg').className === "${status_esperado}"

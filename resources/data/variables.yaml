@@ -1,3 +1,10 @@
 USER_VALIDO: valid_user
 SENHA_VALIDA: secret123
 SENHA_INVALIDA: ffqwefqw12321
+PRODUTO_INEXISTENTE: "produto_inexistente_12345"
+PRODUTO_EXISTENTE: "Mouse"
+PRODUTOS_MULTIPLOS:
+  - Keyboard
+  - Monitor
+  - Headset
+  - Webcam
