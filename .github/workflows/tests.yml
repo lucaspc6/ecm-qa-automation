@@ -48,5 +48,7 @@ jobs:
 
       - name: Run tests
         run: robot tests/
+        env:
+          HEADLESS: True
 
 

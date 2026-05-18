@@ -1,211 +1,245 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.0 on win32)" generated="2026-05-17T20:43:15.165954" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.0 on win32)" generated="2026-05-17T21:37:16.572736" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\LucasCarvalho\Documents\Projects\ecm-qa-automation\tests">
 <suite id="s1-s1" name="Auth" source="C:\Users\LucasCarvalho\Documents\Projects\ecm-qa-automation\tests\auth.robot">
 <test id="s1-s1-t1" name="CT01 — Usuário deve acessar a página inicial com sucesso" line="7">
 <kw name="Dado que o usuário acessa a aplicação" owner="flows">
 <kw name="Abrir Aplicação Na Home" owner="setup">
 <kw name="Abrir Navegador" owner="common">
+<kw name="Obter Headless" owner="config">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-05-17T21:37:17.725805" level="INFO">${value} = False</msg>
+<var>${value}</var>
+<arg>HEADLESS</arg>
+<arg>False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-05-17T21:37:17.725365" elapsed="0.000506"/>
+</kw>
+<return>
+<value>${value}</value>
+<status status="PASS" start="2026-05-17T21:37:17.726016" elapsed="0.000155"/>
+</return>
+<msg time="2026-05-17T21:37:17.726374" level="INFO">${headless} = False</msg>
+<var>${headless}</var>
+<status status="PASS" start="2026-05-17T21:37:17.724147" elapsed="0.002260"/>
+</kw>
 <kw name="New Browser" owner="Browser">
-<msg time="2026-05-17T20:43:15.501747" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\LucasCarvalho\\Documents\\Projects\\ecm-qa-automation\\results\\browser\\traces\\temp\\1eb34c6b-18ea-4a12-a890-187a7329dbf4"}</msg>
-<msg time="2026-05-17T20:43:15.541271" level="INFO">Starting Browser process C:\Users\LucasCarvalho\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:53304</msg>
-<msg time="2026-05-17T20:43:17.239696" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\LucasCarvalho\\Documents\\Projects\\ecm-qa-automation\\results\\browser\\traces\\temp\\1eb34c6b-18ea-4a12-a890-187a7329dbf4"}</msg>
+<msg time="2026-05-17T21:37:17.727706" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\LucasCarvalho\\Documents\\Projects\\ecm-qa-automation\\results\\browser\\traces\\temp\\93a003b5-41c5-4616-805d-023df4411a4e"}</msg>
+<msg time="2026-05-17T21:37:17.787693" level="INFO">Starting Browser process C:\Users\LucasCarvalho\AppData\Local\Programs\Python\Python314\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:62303</msg>
+<msg time="2026-05-17T21:37:19.694926" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\LucasCarvalho\\Documents\\Projects\\ecm-qa-automation\\results\\browser\\traces\\temp\\93a003b5-41c5-4616-805d-023df4411a4e"}</msg>
 <arg>chromium</arg>
-<arg>headless=${HEADLESS}</arg>
+<arg>headless=${headless}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-05-17T20:43:15.501119" elapsed="1.738753"/>
+<status status="PASS" start="2026-05-17T21:37:17.726570" elapsed="1.968658"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:15.500676" elapsed="1.739473"/>
+<status status="PASS" start="2026-05-17T21:37:17.723584" elapsed="1.971912"/>
 </kw>
 <kw name="Acessar URL" owner="common">
 <kw name="New Page" owner="Browser">
-<msg time="2026-05-17T20:43:17.511021" level="INFO">Successfully initialized new page object and opened url: http://localhost:8080</msg>
-<msg time="2026-05-17T20:43:17.511110" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2026-05-17T21:37:22.154463" level="INFO">Successfully initialized new page object and opened url: http://localhost:8080</msg>
+<msg time="2026-05-17T21:37:22.154652" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-05-17T20:43:17.240709" elapsed="0.270537"/>
+<status status="PASS" start="2026-05-17T21:37:19.696666" elapsed="2.458502"/>
 </kw>
 <arg>${BASE_URL}</arg>
-<status status="PASS" start="2026-05-17T20:43:17.240342" elapsed="0.271021"/>
+<status status="PASS" start="2026-05-17T21:37:19.695928" elapsed="2.459531"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:15.500455" elapsed="2.010958"/>
+<status status="PASS" start="2026-05-17T21:37:17.723106" elapsed="4.432468"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:15.500097" elapsed="2.011356"/>
+<status status="PASS" start="2026-05-17T21:37:17.722299" elapsed="4.433368"/>
 </kw>
 <kw name="Então a página inicial deve ser carregada corretamente" owner="flows">
 <kw name="Verificar Página Inicial Carregada" owner="home">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-17T20:43:17.537608" level="INFO">Waited for Element with selector text="ECM Marketplace - QA Automation Test" at state visible</msg>
+<msg time="2026-05-17T21:37:22.249142" level="INFO">Waited for Element with selector text="ECM Marketplace - QA Automation Test" at state visible</msg>
 <arg>text="ECM Marketplace - QA Automation Test"</arg>
 <arg>visible</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-17T20:43:17.512319" elapsed="0.025441"/>
+<status status="PASS" start="2026-05-17T21:37:22.157743" elapsed="0.092071"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:17.512126" elapsed="0.025738"/>
+<status status="PASS" start="2026-05-17T21:37:22.157181" elapsed="0.093149"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:17.511817" elapsed="0.026088"/>
+<status status="PASS" start="2026-05-17T21:37:22.156420" elapsed="0.094141"/>
 </kw>
 <kw name="E navega para a página de login" owner="flows">
 <kw name="Navegar Para Login" owner="home">
 <kw name="Click" owner="Browser">
-<msg time="2026-05-17T20:43:17.539276" level="INFO">Clicks the element 'id=nav-login'.</msg>
+<msg time="2026-05-17T21:37:22.254041" level="INFO">Clicks the element 'id=nav-login'.</msg>
 <arg>id=nav-login</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-17T20:43:17.538884" elapsed="0.044373"/>
+<status status="PASS" start="2026-05-17T21:37:22.252773" elapsed="0.116758"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:17.538659" elapsed="0.044717"/>
+<status status="PASS" start="2026-05-17T21:37:22.252207" elapsed="0.117629"/>
 </kw>
 <kw name="Verificar Página Login Carregada" owner="login">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-17T20:43:17.599390" level="INFO">Waited for Element with selector text="Login - ECM Marketplace" at state visible</msg>
+<msg time="2026-05-17T21:37:22.405946" level="INFO">Waited for Element with selector text="Login - ECM Marketplace" at state visible</msg>
 <arg>text="Login - ECM Marketplace"</arg>
 <arg>visible</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-17T20:43:17.583834" elapsed="0.015709"/>
+<status status="PASS" start="2026-05-17T21:37:22.371669" elapsed="0.034833"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:17.583536" elapsed="0.016106"/>
+<status status="PASS" start="2026-05-17T21:37:22.370248" elapsed="0.036611"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:17.538300" elapsed="0.061379"/>
+<status status="PASS" start="2026-05-17T21:37:22.251471" elapsed="0.155528"/>
 </kw>
-<msg time="2026-05-17T20:43:17.610737" level="INFO">Switching context to context=30ac2a14-506c-408f-b4f0-c136e8d1a708 in CURRENT</msg>
-<msg time="2026-05-17T20:43:17.615027" level="INFO">Successfully changed active context: context=30ac2a14-506c-408f-b4f0-c136e8d1a708</msg>
-<msg time="2026-05-17T20:43:17.626163" level="INFO">Successfully closed Context</msg>
+<msg time="2026-05-17T21:37:22.445598" level="INFO">Switching context to context=0a881c6f-af48-4634-87a4-71dce0161fb2 in CURRENT</msg>
+<msg time="2026-05-17T21:37:22.466438" level="INFO">Successfully changed active context: context=0a881c6f-af48-4634-87a4-71dce0161fb2</msg>
+<msg time="2026-05-17T21:37:22.516470" level="INFO">Successfully closed Context</msg>
 <doc>Tipo: Teste de Aceitação
 Objetivo: Validar que o usuário consegue acessar a home e navegar para login</doc>
-<status status="PASS" start="2026-05-17T20:43:15.498868" elapsed="2.101104"/>
+<status status="PASS" start="2026-05-17T21:37:17.720615" elapsed="4.687071"/>
 </test>
 <test id="s1-s1-t2" name="CT02 — Usuário deve realizar login com credenciais válidas" line="18">
 <kw name="Dado que o usuário acessa a aplicação" owner="flows">
 <kw name="Abrir Aplicação Na Home" owner="setup">
 <kw name="Abrir Navegador" owner="common">
+<kw name="Obter Headless" owner="config">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-05-17T21:37:22.531811" level="INFO">${value} = False</msg>
+<var>${value}</var>
+<arg>HEADLESS</arg>
+<arg>False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-05-17T21:37:22.531511" elapsed="0.000341"/>
+</kw>
+<return>
+<value>${value}</value>
+<status status="PASS" start="2026-05-17T21:37:22.532152" elapsed="0.000244"/>
+</return>
+<msg time="2026-05-17T21:37:22.532767" level="INFO">${headless} = False</msg>
+<var>${headless}</var>
+<status status="PASS" start="2026-05-17T21:37:22.531201" elapsed="0.001600"/>
+</kw>
 <kw name="New Browser" owner="Browser">
-<msg time="2026-05-17T20:43:17.630680" level="INFO">Switching browser to browser=30ca58ef-3a32-40b8-a095-679334dfe096</msg>
-<msg time="2026-05-17T20:43:17.631992" level="INFO">Successfully changed active browser: browser=30ca58ef-3a32-40b8-a095-679334dfe096</msg>
-<msg time="2026-05-17T20:43:17.632042" level="INFO">Reusing existing browser with id: browser=30ca58ef-3a32-40b8-a095-679334dfe096</msg>
+<msg time="2026-05-17T21:37:22.533887" level="INFO">Switching browser to browser=fe4c4fab-329b-4fcb-aa95-454c0936f462</msg>
+<msg time="2026-05-17T21:37:22.538330" level="INFO">Successfully changed active browser: browser=fe4c4fab-329b-4fcb-aa95-454c0936f462</msg>
+<msg time="2026-05-17T21:37:22.538472" level="INFO">Reusing existing browser with id: browser=fe4c4fab-329b-4fcb-aa95-454c0936f462</msg>
 <arg>chromium</arg>
-<arg>headless=${HEADLESS}</arg>
+<arg>headless=${headless}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-05-17T20:43:17.630258" elapsed="0.001823"/>
+<status status="PASS" start="2026-05-17T21:37:22.533081" elapsed="0.005470"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:17.630081" elapsed="0.002066"/>
+<status status="PASS" start="2026-05-17T21:37:22.530874" elapsed="0.007818"/>
 </kw>
 <kw name="Acessar URL" owner="common">
 <kw name="New Page" owner="Browser">
-<msg time="2026-05-17T20:43:17.711009" level="INFO">Successfully initialized new page object and opened url: http://localhost:8080</msg>
-<msg time="2026-05-17T20:43:17.711106" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2026-05-17T21:37:24.976472" level="INFO">Successfully initialized new page object and opened url: http://localhost:8080</msg>
+<msg time="2026-05-17T21:37:24.976731" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-05-17T20:43:17.632468" elapsed="0.078778"/>
+<status status="PASS" start="2026-05-17T21:37:22.539659" elapsed="2.437367"/>
 </kw>
 <arg>${BASE_URL}</arg>
-<status status="PASS" start="2026-05-17T20:43:17.632243" elapsed="0.079126"/>
+<status status="PASS" start="2026-05-17T21:37:22.538933" elapsed="2.438361"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:17.629896" elapsed="0.081527"/>
+<status status="PASS" start="2026-05-17T21:37:22.530338" elapsed="2.447071"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:17.629607" elapsed="0.081859"/>
+<status status="PASS" start="2026-05-17T21:37:22.529342" elapsed="2.448946"/>
 </kw>
 <kw name="E navega para a página de login" owner="flows">
 <kw name="Navegar Para Login" owner="home">
 <kw name="Click" owner="Browser">
-<msg time="2026-05-17T20:43:17.712918" level="INFO">Clicks the element 'id=nav-login'.</msg>
+<msg time="2026-05-17T21:37:24.983831" level="INFO">Clicks the element 'id=nav-login'.</msg>
 <arg>id=nav-login</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-17T20:43:17.712470" elapsed="0.073916"/>
+<status status="PASS" start="2026-05-17T21:37:24.982518" elapsed="0.152768"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:17.712193" elapsed="0.074359"/>
+<status status="PASS" start="2026-05-17T21:37:24.981965" elapsed="0.153567"/>
 </kw>
 <kw name="Verificar Página Login Carregada" owner="login">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-17T20:43:17.808286" level="INFO">Waited for Element with selector text="Login - ECM Marketplace" at state visible</msg>
+<msg time="2026-05-17T21:37:25.169910" level="INFO">Waited for Element with selector text="Login - ECM Marketplace" at state visible</msg>
 <arg>text="Login - ECM Marketplace"</arg>
 <arg>visible</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-17T20:43:17.787223" elapsed="0.021219"/>
+<status status="PASS" start="2026-05-17T21:37:25.136881" elapsed="0.033318"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:17.786780" elapsed="0.021809"/>
+<status status="PASS" start="2026-05-17T21:37:25.135888" elapsed="0.034531"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:17.711837" elapsed="0.096791"/>
+<status status="PASS" start="2026-05-17T21:37:24.980803" elapsed="0.189725"/>
 </kw>
 <kw name="Quando o usuário realiza login com credenciais válidas" owner="flows">
 <kw name="Preencher Campo Usuario" owner="login">
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-17T20:43:17.810740" level="INFO">Fills the text 'valid_user' in the given field.</msg>
+<msg time="2026-05-17T21:37:25.173375" level="INFO">Fills the text 'valid_user' in the given field.</msg>
 <arg>id=username</arg>
 <arg>${usuario}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-17T20:43:17.810067" elapsed="0.012057"/>
+<status status="PASS" start="2026-05-17T21:37:25.172252" elapsed="0.029232"/>
 </kw>
 <arg>${USER_VALIDO}</arg>
-<status status="PASS" start="2026-05-17T20:43:17.809646" elapsed="0.012622"/>
+<status status="PASS" start="2026-05-17T21:37:25.171744" elapsed="0.029971"/>
 </kw>
 <kw name="Preencher Campo Senha" owner="login">
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-17T20:43:17.823341" level="INFO">Fills the text 'secret123' in the given field.</msg>
+<msg time="2026-05-17T21:37:25.203863" level="INFO">Fills the text 'secret123' in the given field.</msg>
 <arg>id=password</arg>
 <arg>${senha}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-17T20:43:17.822873" elapsed="0.008964"/>
+<status status="PASS" start="2026-05-17T21:37:25.202825" elapsed="0.019364"/>
 </kw>
 <arg>${SENHA_VALIDA}</arg>
-<status status="PASS" start="2026-05-17T20:43:17.822471" elapsed="0.009491"/>
+<status status="PASS" start="2026-05-17T21:37:25.202042" elapsed="0.020420"/>
 </kw>
 <kw name="Clicar no Botao Login" owner="login">
 <kw name="Click" owner="Browser">
-<msg time="2026-05-17T20:43:17.832848" level="INFO">Clicks the element 'id=btnLogin'.</msg>
+<msg time="2026-05-17T21:37:25.224458" level="INFO">Clicks the element 'id=btnLogin'.</msg>
 <arg>id=btnLogin</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-17T20:43:17.832458" elapsed="0.043195"/>
+<status status="PASS" start="2026-05-17T21:37:25.223566" elapsed="0.055650"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:17.832136" elapsed="0.043734"/>
+<status status="PASS" start="2026-05-17T21:37:25.222858" elapsed="0.056895"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:17.809120" elapsed="0.066837"/>
+<status status="PASS" start="2026-05-17T21:37:25.171144" elapsed="0.108896"/>
 </kw>
 <kw name="Então o login deve ser realizado com sucesso" owner="flows">
 <kw name="Validar Status do Login" owner="login">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-17T20:43:17.885855" level="INFO">Waited for Element with selector id=msg at state attached</msg>
+<msg time="2026-05-17T21:37:25.294591" level="INFO">Waited for Element with selector id=msg at state attached</msg>
 <arg>id=msg</arg>
 <arg>attached</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-17T20:43:17.877681" elapsed="0.008382"/>
+<status status="PASS" start="2026-05-17T21:37:25.282999" elapsed="0.012037"/>
 </kw>
 <kw name="Wait For Function" owner="Browser">
-<msg time="2026-05-17T20:43:18.487616" level="INFO">Wait For Function completed successfully.</msg>
+<msg time="2026-05-17T21:37:25.890614" level="INFO">Wait For Function completed successfully.</msg>
 <arg>document.getElementById('msg').className === "${status_esperado}"</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Polls JavaScript expression or function in browser until it returns a (JavaScript) truthy value.</doc>
-<status status="PASS" start="2026-05-17T20:43:17.886358" elapsed="0.601411"/>
+<status status="PASS" start="2026-05-17T21:37:25.295593" elapsed="0.595361"/>
 </kw>
 <kw name="Get Attribute" owner="Browser">
-<msg time="2026-05-17T20:43:18.498375" level="INFO">Attribute is: 'success'</msg>
-<msg time="2026-05-17T20:43:18.498533" level="INFO">${class_value} = success</msg>
+<msg time="2026-05-17T21:37:25.918247" level="INFO">Attribute is: 'success'</msg>
+<msg time="2026-05-17T21:37:25.918651" level="INFO">${class_value} = success</msg>
 <var>${class_value}</var>
 <arg>id=msg</arg>
 <arg>class</arg>
@@ -213,40 +247,40 @@ Objetivo: Validar que o usuário consegue acessar a home e navegar para login</d
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-17T20:43:18.487945" elapsed="0.010613"/>
+<status status="PASS" start="2026-05-17T21:37:25.891555" elapsed="0.027159"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${class_value}</arg>
 <arg>${status_esperado}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-05-17T20:43:18.498746" elapsed="0.000419"/>
+<status status="PASS" start="2026-05-17T21:37:25.919233" elapsed="0.002259"/>
 </kw>
 <arg>success</arg>
-<status status="PASS" start="2026-05-17T20:43:17.877211" elapsed="0.622022"/>
+<status status="PASS" start="2026-05-17T21:37:25.282292" elapsed="0.639460"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:17.876577" elapsed="0.622702"/>
+<status status="PASS" start="2026-05-17T21:37:25.280968" elapsed="0.640926"/>
 </kw>
 <kw name="E deve ser redirecionado para a página de produtos" owner="flows">
 <kw name="Verificar Página Produtos Carregada" owner="products">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-17T20:43:19.875723" level="INFO">Waited for Element with selector text="Products - ECM Marketplace" at state visible</msg>
+<msg time="2026-05-17T21:37:27.321065" level="INFO">Waited for Element with selector text="Products - ECM Marketplace" at state visible</msg>
 <arg>text="Products - ECM Marketplace"</arg>
 <arg>visible</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-17T20:43:18.501993" elapsed="1.373878"/>
+<status status="PASS" start="2026-05-17T21:37:25.923909" elapsed="1.397636"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:18.500298" elapsed="1.375672"/>
+<status status="PASS" start="2026-05-17T21:37:25.923379" elapsed="1.398486"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:18.499990" elapsed="1.376018"/>
+<status status="PASS" start="2026-05-17T21:37:25.922736" elapsed="1.399276"/>
 </kw>
 <kw name="E o usuário está autenticado" owner="flows">
 <kw name="Validar Estado De Autenticação" owner="common">
 <kw name="Obter Estado De Autenticação" owner="common">
 <kw name="Evaluate JavaScript" owner="Browser">
-<msg time="2026-05-17T20:43:19.893278" level="INFO">JavaScript executed successfully.</msg>
-<msg time="2026-05-17T20:43:19.893497" level="INFO">${auth_value} = true</msg>
+<msg time="2026-05-17T21:37:27.366646" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2026-05-17T21:37:27.367096" level="INFO">${auth_value} = true</msg>
 <var>${auth_value}</var>
 <arg>css=body</arg>
 <arg>() =&gt; localStorage.getItem('auth')</arg>
@@ -254,156 +288,173 @@ Objetivo: Validar que o usuário consegue acessar a home e navegar para login</d
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Executes given javascript on the selected element(s) or on page.</doc>
-<status status="PASS" start="2026-05-17T20:43:19.877305" elapsed="0.016213"/>
+<status status="PASS" start="2026-05-17T21:37:27.325039" elapsed="0.042115"/>
 </kw>
 <return>
 <value>${auth_value}</value>
-<status status="PASS" start="2026-05-17T20:43:19.893614" elapsed="0.000389"/>
+<status status="PASS" start="2026-05-17T21:37:27.367351" elapsed="0.000330"/>
 </return>
-<msg time="2026-05-17T20:43:19.894172" level="INFO">${auth_value} = true</msg>
+<msg time="2026-05-17T21:37:27.367974" level="INFO">${auth_value} = true</msg>
 <var>${auth_value}</var>
-<status status="PASS" start="2026-05-17T20:43:19.877104" elapsed="0.017086"/>
+<status status="PASS" start="2026-05-17T21:37:27.324499" elapsed="0.043678"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${auth_value}</arg>
 <arg>${estado_esperado}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-05-17T20:43:19.894311" elapsed="0.000672"/>
+<status status="PASS" start="2026-05-17T21:37:27.368525" elapsed="0.000733"/>
 </kw>
 <arg>true</arg>
-<status status="PASS" start="2026-05-17T20:43:19.876872" elapsed="0.018172"/>
+<status status="PASS" start="2026-05-17T21:37:27.323845" elapsed="0.045564"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:19.876542" elapsed="0.018538"/>
+<status status="PASS" start="2026-05-17T21:37:27.322959" elapsed="0.046550"/>
 </kw>
-<msg time="2026-05-17T20:43:19.906130" level="INFO">Switching context to context=f0d76ce7-40da-4c20-8bfb-0520f266883b in CURRENT</msg>
-<msg time="2026-05-17T20:43:19.911814" level="INFO">Successfully changed active context: context=f0d76ce7-40da-4c20-8bfb-0520f266883b</msg>
-<msg time="2026-05-17T20:43:19.917392" level="INFO">Successfully closed Context</msg>
+<msg time="2026-05-17T21:37:27.387657" level="INFO">Switching context to context=e60cdb1c-4537-4378-bb86-f753d7831b63 in CURRENT</msg>
+<msg time="2026-05-17T21:37:27.401107" level="INFO">Successfully changed active context: context=e60cdb1c-4537-4378-bb86-f753d7831b63</msg>
+<msg time="2026-05-17T21:37:27.429950" level="INFO">Successfully closed Context</msg>
 <doc>Tipo: Teste de Aceitação - Happy Path
 Objetivo: Validar que o usuário consegue se autenticar com credenciais válidas</doc>
-<status status="PASS" start="2026-05-17T20:43:17.626744" elapsed="2.268836"/>
+<status status="PASS" start="2026-05-17T21:37:22.518585" elapsed="4.851469"/>
 </test>
 <test id="s1-s1-t3" name="CT03 — Usuário não deve realizar login com credenciais inválidas" line="33">
 <kw name="Dado que o usuário acessa a aplicação" owner="flows">
 <kw name="Abrir Aplicação Na Home" owner="setup">
 <kw name="Abrir Navegador" owner="common">
+<kw name="Obter Headless" owner="config">
+<kw name="Get Environment Variable" owner="OperatingSystem">
+<msg time="2026-05-17T21:37:27.450776" level="INFO">${value} = False</msg>
+<var>${value}</var>
+<arg>HEADLESS</arg>
+<arg>False</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<status status="PASS" start="2026-05-17T21:37:27.449635" elapsed="0.001225"/>
+</kw>
+<return>
+<value>${value}</value>
+<status status="PASS" start="2026-05-17T21:37:27.450979" elapsed="0.000149"/>
+</return>
+<msg time="2026-05-17T21:37:27.451742" level="INFO">${headless} = False</msg>
+<var>${headless}</var>
+<status status="PASS" start="2026-05-17T21:37:27.448450" elapsed="0.003337"/>
+</kw>
 <kw name="New Browser" owner="Browser">
-<msg time="2026-05-17T20:43:19.923962" level="INFO">Switching browser to browser=30ca58ef-3a32-40b8-a095-679334dfe096</msg>
-<msg time="2026-05-17T20:43:19.924946" level="INFO">Successfully changed active browser: browser=30ca58ef-3a32-40b8-a095-679334dfe096</msg>
-<msg time="2026-05-17T20:43:19.925021" level="INFO">Reusing existing browser with id: browser=30ca58ef-3a32-40b8-a095-679334dfe096</msg>
+<msg time="2026-05-17T21:37:27.453793" level="INFO">Switching browser to browser=fe4c4fab-329b-4fcb-aa95-454c0936f462</msg>
+<msg time="2026-05-17T21:37:27.460163" level="INFO">Successfully changed active browser: browser=fe4c4fab-329b-4fcb-aa95-454c0936f462</msg>
+<msg time="2026-05-17T21:37:27.460722" level="INFO">Reusing existing browser with id: browser=fe4c4fab-329b-4fcb-aa95-454c0936f462</msg>
 <arg>chromium</arg>
-<arg>headless=${HEADLESS}</arg>
+<arg>headless=${headless}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2026-05-17T20:43:19.923554" elapsed="0.001509"/>
+<status status="PASS" start="2026-05-17T21:37:27.452010" elapsed="0.008838"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:19.923388" elapsed="0.001742"/>
+<status status="PASS" start="2026-05-17T21:37:27.447774" elapsed="0.013230"/>
 </kw>
 <kw name="Acessar URL" owner="common">
 <kw name="New Page" owner="Browser">
-<msg time="2026-05-17T20:43:20.009593" level="INFO">Successfully initialized new page object and opened url: http://localhost:8080</msg>
-<msg time="2026-05-17T20:43:20.009696" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2026-05-17T21:37:29.907208" level="INFO">Successfully initialized new page object and opened url: http://localhost:8080</msg>
+<msg time="2026-05-17T21:37:29.907416" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>${url}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2026-05-17T20:43:19.925451" elapsed="0.084361"/>
+<status status="PASS" start="2026-05-17T21:37:27.462033" elapsed="2.445820"/>
 </kw>
 <arg>${BASE_URL}</arg>
-<status status="PASS" start="2026-05-17T20:43:19.925226" elapsed="0.084688"/>
+<status status="PASS" start="2026-05-17T21:37:27.461474" elapsed="2.447375"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:19.923205" elapsed="0.086750"/>
+<status status="PASS" start="2026-05-17T21:37:27.446684" elapsed="2.462311"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:19.922865" elapsed="0.087123"/>
+<status status="PASS" start="2026-05-17T21:37:27.445587" elapsed="2.463540"/>
 </kw>
 <kw name="E navega para a página de login" owner="flows">
 <kw name="Navegar Para Login" owner="home">
 <kw name="Click" owner="Browser">
-<msg time="2026-05-17T20:43:20.011335" level="INFO">Clicks the element 'id=nav-login'.</msg>
+<msg time="2026-05-17T21:37:29.914553" level="INFO">Clicks the element 'id=nav-login'.</msg>
 <arg>id=nav-login</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-17T20:43:20.010975" elapsed="0.074431"/>
+<status status="PASS" start="2026-05-17T21:37:29.913756" elapsed="0.144915"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:20.010764" elapsed="0.074851"/>
+<status status="PASS" start="2026-05-17T21:37:29.913155" elapsed="0.145777"/>
 </kw>
 <kw name="Verificar Página Login Carregada" owner="login">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-17T20:43:20.104802" level="INFO">Waited for Element with selector text="Login - ECM Marketplace" at state visible</msg>
+<msg time="2026-05-17T21:37:30.087830" level="INFO">Waited for Element with selector text="Login - ECM Marketplace" at state visible</msg>
 <arg>text="Login - ECM Marketplace"</arg>
 <arg>visible</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-17T20:43:20.086444" elapsed="0.018551"/>
+<status status="PASS" start="2026-05-17T21:37:30.059991" elapsed="0.028207"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:20.085897" elapsed="0.019228"/>
+<status status="PASS" start="2026-05-17T21:37:30.059297" elapsed="0.029133"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:20.010431" elapsed="0.094750"/>
+<status status="PASS" start="2026-05-17T21:37:29.911197" elapsed="0.177316"/>
 </kw>
 <kw name="Quando o usuário realiza login com credenciais inválidas" owner="flows">
 <kw name="Preencher Campo Usuario" owner="login">
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-17T20:43:20.107216" level="INFO">Fills the text 'valid_user' in the given field.</msg>
+<msg time="2026-05-17T21:37:30.091877" level="INFO">Fills the text 'valid_user' in the given field.</msg>
 <arg>id=username</arg>
 <arg>${usuario}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-17T20:43:20.106537" elapsed="0.013442"/>
+<status status="PASS" start="2026-05-17T21:37:30.090609" elapsed="0.025731"/>
 </kw>
 <arg>${USER_VALIDO}</arg>
-<status status="PASS" start="2026-05-17T20:43:20.106146" elapsed="0.014655"/>
+<status status="PASS" start="2026-05-17T21:37:30.090072" elapsed="0.026573"/>
 </kw>
 <kw name="Preencher Campo Senha" owner="login">
 <kw name="Fill Text" owner="Browser">
-<msg time="2026-05-17T20:43:20.122177" level="INFO">Fills the text 'ffqwefqw12321' in the given field.</msg>
+<msg time="2026-05-17T21:37:30.119158" level="INFO">Fills the text 'ffqwefqw12321' in the given field.</msg>
 <arg>id=password</arg>
 <arg>${senha}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2026-05-17T20:43:20.121598" elapsed="0.008969"/>
+<status status="PASS" start="2026-05-17T21:37:30.117996" elapsed="0.021127"/>
 </kw>
 <arg>${SENHA_INVALIDA}</arg>
-<status status="PASS" start="2026-05-17T20:43:20.121134" elapsed="0.009578"/>
+<status status="PASS" start="2026-05-17T21:37:30.117045" elapsed="0.022355"/>
 </kw>
 <kw name="Clicar no Botao Login" owner="login">
 <kw name="Click" owner="Browser">
-<msg time="2026-05-17T20:43:20.131683" level="INFO">Clicks the element 'id=btnLogin'.</msg>
+<msg time="2026-05-17T21:37:30.141544" level="INFO">Clicks the element 'id=btnLogin'.</msg>
 <arg>id=btnLogin</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-17T20:43:20.131256" elapsed="0.045825"/>
+<status status="PASS" start="2026-05-17T21:37:30.140531" elapsed="0.060028"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:20.130898" elapsed="0.046404"/>
+<status status="PASS" start="2026-05-17T21:37:30.139776" elapsed="0.061050"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:20.105648" elapsed="0.071746"/>
+<status status="PASS" start="2026-05-17T21:37:30.089338" elapsed="0.111598"/>
 </kw>
 <kw name="Então o login deve falhar" owner="flows">
 <kw name="Validar Status do Login" owner="login">
 <kw name="Wait For Elements State" owner="Browser">
-<msg time="2026-05-17T20:43:20.186364" level="INFO">Waited for Element with selector id=msg at state attached</msg>
+<msg time="2026-05-17T21:37:30.211237" level="INFO">Waited for Element with selector id=msg at state attached</msg>
 <arg>id=msg</arg>
 <arg>attached</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
-<status status="PASS" start="2026-05-17T20:43:20.179049" elapsed="0.007552"/>
+<status status="PASS" start="2026-05-17T21:37:30.202872" elapsed="0.008663"/>
 </kw>
 <kw name="Wait For Function" owner="Browser">
-<msg time="2026-05-17T20:43:20.799342" level="INFO">Wait For Function completed successfully.</msg>
+<msg time="2026-05-17T21:37:30.816833" level="INFO">Wait For Function completed successfully.</msg>
 <arg>document.getElementById('msg').className === "${status_esperado}"</arg>
 <tag>PageContent</tag>
 <tag>Wait</tag>
 <doc>Polls JavaScript expression or function in browser until it returns a (JavaScript) truthy value.</doc>
-<status status="PASS" start="2026-05-17T20:43:20.186915" elapsed="0.612654"/>
+<status status="PASS" start="2026-05-17T21:37:30.211934" elapsed="0.605149"/>
 </kw>
 <kw name="Get Attribute" owner="Browser">
-<msg time="2026-05-17T20:43:20.814070" level="INFO">Attribute is: 'error'</msg>
-<msg time="2026-05-17T20:43:20.814306" level="INFO">${class_value} = error</msg>
+<msg time="2026-05-17T21:37:30.843212" level="INFO">Attribute is: 'error'</msg>
+<msg time="2026-05-17T21:37:30.843717" level="INFO">${class_value} = error</msg>
 <var>${class_value}</var>
 <arg>id=msg</arg>
 <arg>class</arg>
@@ -411,46 +462,46 @@ Objetivo: Validar que o usuário consegue se autenticar com credenciais válidas
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
-<status status="PASS" start="2026-05-17T20:43:20.800006" elapsed="0.014344"/>
+<status status="PASS" start="2026-05-17T21:37:30.817468" elapsed="0.026333"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${class_value}</arg>
 <arg>${status_esperado}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-05-17T20:43:20.814641" elapsed="0.000673"/>
+<status status="PASS" start="2026-05-17T21:37:30.844375" elapsed="0.002079"/>
 </kw>
 <arg>error</arg>
-<status status="PASS" start="2026-05-17T20:43:20.178601" elapsed="0.636852"/>
+<status status="PASS" start="2026-05-17T21:37:30.202332" elapsed="0.644410"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:20.177996" elapsed="0.637536"/>
+<status status="PASS" start="2026-05-17T21:37:30.201603" elapsed="0.645289"/>
 </kw>
 <kw name="E o usuário não deve ser redirecionado" owner="flows">
 <kw name="Não Deve Estar Na Página De Produtos" owner="products">
 <kw name="Get Url" owner="Browser">
-<msg time="2026-05-17T20:43:20.820646" level="INFO">${url} = http://localhost:8080/login.html</msg>
+<msg time="2026-05-17T21:37:30.857541" level="INFO">${url} = http://localhost:8080/login.html</msg>
 <var>${url}</var>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns the current URL.</doc>
-<status status="PASS" start="2026-05-17T20:43:20.817059" elapsed="0.003670"/>
+<status status="PASS" start="2026-05-17T21:37:30.850609" elapsed="0.007020"/>
 </kw>
 <kw name="Should Not Contain" owner="BuiltIn">
 <arg>${url}</arg>
 <arg>products</arg>
 <doc>Fails if ``container`` contains ``item`` one or more times.</doc>
-<status status="PASS" start="2026-05-17T20:43:20.821068" elapsed="0.000908"/>
+<status status="PASS" start="2026-05-17T21:37:30.858038" elapsed="0.001082"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:20.816577" elapsed="0.005524"/>
+<status status="PASS" start="2026-05-17T21:37:30.849689" elapsed="0.009588"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:20.816038" elapsed="0.006137"/>
+<status status="PASS" start="2026-05-17T21:37:30.848546" elapsed="0.010823"/>
 </kw>
 <kw name="E o usuário não está autenticado" owner="flows">
 <kw name="Validar Estado De Autenticação" owner="common">
 <kw name="Obter Estado De Autenticação" owner="common">
 <kw name="Evaluate JavaScript" owner="Browser">
-<msg time="2026-05-17T20:43:20.839050" level="INFO">JavaScript executed successfully.</msg>
-<msg time="2026-05-17T20:43:20.839453" level="INFO">${auth_value} = None</msg>
+<msg time="2026-05-17T21:37:30.889876" level="INFO">JavaScript executed successfully.</msg>
+<msg time="2026-05-17T21:37:30.890425" level="INFO">${auth_value} = None</msg>
 <var>${auth_value}</var>
 <arg>css=body</arg>
 <arg>() =&gt; localStorage.getItem('auth')</arg>
@@ -458,37 +509,37 @@ Objetivo: Validar que o usuário consegue se autenticar com credenciais válidas
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Executes given javascript on the selected element(s) or on page.</doc>
-<status status="PASS" start="2026-05-17T20:43:20.823867" elapsed="0.015643"/>
+<status status="PASS" start="2026-05-17T21:37:30.862479" elapsed="0.028006"/>
 </kw>
 <return>
 <value>${auth_value}</value>
-<status status="PASS" start="2026-05-17T20:43:20.839702" elapsed="0.000285"/>
+<status status="PASS" start="2026-05-17T21:37:30.890727" elapsed="0.000384"/>
 </return>
-<msg time="2026-05-17T20:43:20.840316" level="INFO">${auth_value} = None</msg>
+<msg time="2026-05-17T21:37:30.891526" level="INFO">${auth_value} = None</msg>
 <var>${auth_value}</var>
-<status status="PASS" start="2026-05-17T20:43:20.823542" elapsed="0.016826"/>
+<status status="PASS" start="2026-05-17T21:37:30.861983" elapsed="0.029602"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${auth_value}</arg>
 <arg>${estado_esperado}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-05-17T20:43:20.840630" elapsed="0.000804"/>
+<status status="PASS" start="2026-05-17T21:37:30.891924" elapsed="0.000957"/>
 </kw>
 <arg>${None}</arg>
-<status status="PASS" start="2026-05-17T20:43:20.823075" elapsed="0.018499"/>
+<status status="PASS" start="2026-05-17T21:37:30.861300" elapsed="0.031749"/>
 </kw>
-<status status="PASS" start="2026-05-17T20:43:20.822571" elapsed="0.019107"/>
+<status status="PASS" start="2026-05-17T21:37:30.859953" elapsed="0.033201"/>
 </kw>
-<msg time="2026-05-17T20:43:20.853497" level="INFO">Switching context to context=14e883f1-8647-4d4d-a0c4-813b58adbf3d in CURRENT</msg>
-<msg time="2026-05-17T20:43:20.859708" level="INFO">Successfully changed active context: context=14e883f1-8647-4d4d-a0c4-813b58adbf3d</msg>
-<msg time="2026-05-17T20:43:20.864613" level="INFO">Successfully closed Context</msg>
+<msg time="2026-05-17T21:37:30.919886" level="INFO">Switching context to context=26d3bc99-9169-4687-b06d-2034ac2d109b in CURRENT</msg>
+<msg time="2026-05-17T21:37:30.932123" level="INFO">Successfully changed active context: context=26d3bc99-9169-4687-b06d-2034ac2d109b</msg>
+<msg time="2026-05-17T21:37:30.974627" level="INFO">Successfully closed Context</msg>
 <doc>Tipo: Teste de Aceitação - Negativo
 Objetivo: Validar que o sistema impede autenticação com credenciais inválidas</doc>
-<status status="PASS" start="2026-05-17T20:43:19.919078" elapsed="0.922982"/>
+<status status="PASS" start="2026-05-17T21:37:27.433675" elapsed="3.460384"/>
 </test>
-<status status="PASS" start="2026-05-17T20:43:15.215184" elapsed="5.650202"/>
+<status status="PASS" start="2026-05-17T21:37:16.635630" elapsed="14.341600"/>
 </suite>
-<status status="PASS" start="2026-05-17T20:43:15.167207" elapsed="5.704659"/>
+<status status="PASS" start="2026-05-17T21:37:16.575806" elapsed="14.418111"/>
 </suite>
 <statistics>
 <total>

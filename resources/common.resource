@@ -6,7 +6,9 @@ Resource   config.resource
 ***Keywords ***
 
 Abrir Navegador
-    New Browser    chromium    headless=${HEADLESS}
+    ${headless}=    Obter Headless
+    New Browser    chromium    headless=${headless}
+
 
 Acessar URL 
     [Arguments]     ${url}
