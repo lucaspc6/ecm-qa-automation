@@ -1,64 +1,76 @@
-# ECM QA Automation
+# QA Automation Project - ECM Marketplace
 
-## Objetivo
-Automação de testes E2E utilizando Robot Framework, com foco na validação de comportamento da aplicação via UI e estado interno (localStorage).
+## Overview
 
----
+This project is a **QA Automation Suite** designed to validate the ECM Marketplace App (System Under Test).
 
-## Tecnologias
-- Robot Framework  
-- Browser Library (Playwright)  
+It simulates real-world QA engineering practices, focusing on end-to-end flows, UI interactions, and state validation.
 
 ---
 
-## Cenários implementados
+## System Under Test (SUT)
 
-### Autenticação
-- CT01 — Acesso à aplicação  
-- CT02 — Login com credenciais válidas  
-- CT03 — Login com credenciais inválidas  
+```
+QA Automation Project
+        ↓
+ECM Marketplace App (SUT)
+```
 
-### Produtos e Busca
-- CT04 — Acesso à página de produtos  
-- CT05 — Busca por produto existente  
-- CT06 — Busca por produto inexistente  
+The automation:
 
-### Carrinho
-- CT07 — Adição de produto ao carrinho  
-- CT08 — Adição de múltiplos produtos ao carrinho  
+- Drives user actions
+- Interacts with UI elements
+- Validates expected results
+- Ensures system behavior correctness
 
----
-
-## Estratégia de Automação
-
-- Validação baseada em **comportamento real da aplicação**:
-  - UI (lista de produtos, mensagens, contador)
-  - `localStorage` (persistência do carrinho)
-
-- Uso de **estratégias de espera explícita** para lidar com comportamento assíncrono (ex: busca com debounce)
-
-- Separação clara de responsabilidades:
-  - **tests** → cenários BDD (legíveis e orientados a negócio)  
-  - **flows** → orquestração dos passos  
-  - **pages** → interação com UI e validações  
-  - **common/config** → infraestrutura e configuração  
-
-- Reutilização de steps e centralização de dados em `variables.yaml`
+This separation reflects real-world QA architecture used in modern engineering teams.
 
 ---
 
-## Configuração
-Execução controlada por variável de ambiente:
+## Setup Instructions
 
-- Local → browser visível  
-- CI → headless  
-
----
-
-## Como executar
+### 1. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 rfbrowser init
-robot -d results tests/
-``
+```
+
+---
+
+### 2. Clone and run the application
+
+```bash
+git clone https://github.com/lucaspc6/ecm-marketplace-app.git
+cd ecm-marketplace-app
+```
+
+---
+
+### 3. Run tests
+
+```bash
+robot -d results tests/auth.robot tests/products.robot tests/checkout.robot
+```
+
+---
+
+## Test Strategy
+
+- End-to-end validation of user flows
+- Explicit waits to handle asynchronous operations
+- Validation of both UI and internal application state
+- Reusable and structured test design
+
+---
+
+## Notes for Recruiters / Reviewers
+
+This project demonstrates:
+
+- Handling of asynchronous UI flows
+- Use of Page Object Model (POM) with clear structure
+- Validation beyond UI (state-level verification)
+- Reliable and maintainable test automation design
+
+The scope is intentionally focused to highlight core QA engineering practices without unnecessary complexity.
