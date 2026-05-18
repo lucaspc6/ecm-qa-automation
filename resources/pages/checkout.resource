@@ -21,6 +21,8 @@ Verificar Página Checkout Carregada
     ...    text="Checkout - ECM Marketplace"
     ...    visible
 
+    ${url}=    Get Url
+    Should Contain    ${url}    checkout
 
 Validar Checkout Realizado Com Sucesso
     Wait For Function

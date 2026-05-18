@@ -22,9 +22,12 @@ Adicionar Produto Ao Carrinho
 # VALIDAÇÕES
 ############################
 
+
 Verificar Página Produtos Carregada
     Wait For Elements State    text="Products - ECM Marketplace"    visible
 
+    ${url}=    Get Url
+    Should Contain    ${url}    products
 
 Não Deve Estar Na Página De Produtos
     ${url}=    Get Url

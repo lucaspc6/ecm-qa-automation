@@ -25,6 +25,7 @@ Clicar no Botao Login
 Verificar Página Login Carregada
     Wait For Elements State    text="Login - ECM Marketplace"    visible
 
+    ${url}=    Get Url
 
 Validar Status Do Login
      [Arguments]    ${status_esperado}
