@@ -3,7 +3,7 @@
 __pycache__/
 *.pyc
 
-results/git rm -r --cached results/
+results/
 
 .vscode/
 
